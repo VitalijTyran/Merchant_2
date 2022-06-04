@@ -15,6 +15,7 @@ public class App {
     static MerchantA merchantA;
     static String infoMerchant;
     static String infoProduct;
+    static String lastname;
 
     public static void main(String[] args) {
         doInputs();
@@ -25,6 +26,8 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter merchant name: ");
         merchantName = scanner.nextLine();
+        System.out.print("Enter merchant lastname: ");
+        lastname = scanner.nextLine();
         System.out.print("Enter merchant phone: ");
         phone = scanner.nextLine();
         System.out.print("Enter merchant email: ");
@@ -38,7 +41,7 @@ public class App {
     }
 
     private static String processData() {
-        merchantA = new MerchantA(merchantName, phone, email);
+        merchantA = new MerchantA(merchantName, phone, email , lastname);
         infoMerchant = merchantA.infoMerchant();
         product = new ProductA(productName, quantity, price);
         infoProduct = product.infoProduct();
