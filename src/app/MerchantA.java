@@ -5,15 +5,16 @@ public class MerchantA extends Merchant implements Bonus {
 
     String email;
 
-    public MerchantA(String name, String phone, String email) {
-        super(name, phone);
+    public MerchantA(String name, String phone, String email , String lastname) {
+        super(name, phone, lastname);
         this.email = email;
     }
 
     public String infoMerchant() {
         String name = getName();
         String phone = getPhone();
-        return "\nMerchant: " + name + ", " + phone + ", " + email + "\n";
+        String lastname = getlastname();
+        return "\nMerchant: " + name + ", " + phone + ", " + lastname + ", " + email +  "\n";
     }
 
     @Override
